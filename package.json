@@ -1,0 +1,35 @@
+{
+  "name": "wildfire-express-site",
+  "version": "1.0.0",
+  "description": "Wildfire Express LLC — 3D multi-page CDL-A recruiting website",
+  "scripts": {
+    "dev": "next dev -p 3010",
+    "build": "next build",
+    "start": "next start",
+    "build:map": "node scripts/build-map.mjs",
+    "build:model": "node scripts/build-model.mjs"
+  },
+  "keywords": [],
+  "devDependencies": {
+    "@gltf-transform/cli": "^4.5.1",
+    "@types/node": "^26.6.5",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@types/three": "^0.160.0",
+    "sharp": "^0.35.5",
+    "topojson-client": "^3.1.0",
+    "typescript": "^5.9.3",
+    "us-atlas": "^3.0.1"
+  },
+  "private": true,
+  "dependencies": {
+    "maplibre-gl": "^5.24.0",
+    "next": "^16.4.0",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "three": "^0.160.0"
+  },
+  "engines": {
+    "node": ">=20.9"
+  }
+}

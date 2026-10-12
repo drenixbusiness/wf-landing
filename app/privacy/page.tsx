@@ -1,0 +1,159 @@
+import Link from 'next/link';
+import type { Metadata } from 'next';
+import { COMPANY } from '@/lib/site';
+import type React from 'react';
+
+export const metadata: Metadata = {
+  title: "Privacy Policy | Wildfire Express LLC",
+  description: "Privacy Policy of Wildfire Express LLC (USDOT 3498707, MC 1154036): what we collect, how we use it, text messaging (SMS) privacy, your rights and how to contact us.",
+  alternates: { canonical: '/privacy' },
+};
+
+export default function Page() {
+  return (
+    <>
+    
+        <section className="scene scene--top" data-shot="top" aria-labelledby="pp-title" style={{ 'minHeight': '0' } as React.CSSProperties}>
+          <div className="container">
+            <div className="panel panel--strong panel--wide legal">
+              <p className="kicker">Legal</p>
+              <h1 id="pp-title" className="h2">Privacy <em>Policy.</em></h1>
+              <p className="meta mt-s">Effective date: <time dateTime="2026-10-12">October 12, 2026</time> · Last updated: <time dateTime="2026-10-12">October 12, 2026</time></p>
+    
+              <div className="callout">
+                <p><strong>Text messaging privacy in short:</strong> No mobile information will be shared with third parties or affiliates for marketing or promotional purposes. Text messaging originator opt-in data and consent will not be shared with any third parties. You can opt out of text messages at any time by replying <strong>STOP</strong>. Details are in <a className="link" href="#sms">Section 6</a>.</p>
+              </div>
+    
+              <nav aria-label="Contents" className="mt-m">
+                <ol className="toc">
+                  <li><a href="#who">Who we are</a></li>
+                  <li><a href="#scope">Scope of this policy</a></li>
+                  <li><a href="#collect">Information we collect</a></li>
+                  <li><a href="#use">How we use information</a></li>
+                  <li><a href="#share">How we share information</a></li>
+                  <li><a href="#sms">Text messaging (SMS) privacy</a></li>
+                  <li><a href="#cookies">Cookies &amp; analytics</a></li>
+                  <li><a href="#retention">Data retention</a></li>
+                  <li><a href="#security">Security</a></li>
+                  <li><a href="#rights">Your choices &amp; rights</a></li>
+                  <li><a href="#california">California notice</a></li>
+                  <li><a href="#children">Children</a></li>
+                  <li><a href="#links">Third-party links</a></li>
+                  <li><a href="#changes">Changes to this policy</a></li>
+                  <li><a href="#contact">Contact us</a></li>
+                </ol>
+              </nav>
+    
+              <h2 id="who">1. Who we are</h2>
+              <p>This Privacy Policy explains how <strong>Wildfire Express LLC</strong> ("<strong>Wildfire Express</strong>," "<strong>we</strong>," "<strong>us</strong>," or "<strong>our</strong>"), a motor carrier registered with the Federal Motor Carrier Safety Administration under <strong>USDOT No. 3498707</strong> and <strong>MC No. 1154036</strong>, collects, uses, discloses and protects personal information. Wildfire Express is the business responsible for the personal information described in this policy.</p>
+              <p>Mailing address: <span className="addr">{COMPANY.address}</span>. Phone: <a className="link" href="tel:+15132065093">+1 (513) 206-5093</a>. Email: <a className="link" href="mailto:hr@wildfireexpress.com">hr@wildfireexpress.com</a>.</p>
+    
+              <h2 id="scope">2. Scope of this policy</h2>
+              <p>This policy applies to personal information we collect through this website and its forms, our text messaging (SMS) program, phone calls and emails with us, and our driver recruiting process (together, the "<strong>Services</strong>"). It covers website visitors, driver applicants (company drivers, owner-operators and lease partners), and business contacts such as brokers and shippers.</p>
+              <p>It does not cover information we process about our current employees and contractors in the course of employment or a lease, which is governed by separate notices provided at hire or lease-on, or websites and services of third parties.</p>
+    
+              <h2 id="collect">3. Information we collect</h2>
+              <h3>3.1 Information you give us</h3>
+              <ul>
+                <li><strong>Identifiers and contact details:</strong> first and last name, mobile and other phone numbers, email address, home state.</li>
+                <li><strong>Application details:</strong> the role you are interested in, whether you hold a Class A commercial driver's license (CDL), years of driving experience and any information you write in a message.</li>
+                <li><strong>Consent records:</strong> whether you opted in to text messages, the exact consent language shown to you, the date, time, web page and device/browser information associated with your opt-in or opt-out.</li>
+                <li><strong>Communications:</strong> the content of calls, text messages, emails and messages you send us. Calls may be recorded for quality and training where permitted by law; we will tell you at the start of the call when a call is recorded.</li>
+              </ul>
+              <h3>3.2 Information collected later in the hiring or lease-on process</h3>
+              <p>If you continue past the initial application, we collect information that federal law requires motor carriers to obtain from drivers, which may include your date of birth, Social Security number, driver's license number and history, employment history for the past three to ten years, motor vehicle records (MVR), Pre-Employment Screening Program (PSP) reports, DOT medical examiner's certificate, drug and alcohol testing history and results, and FMCSA Drug &amp; Alcohol Clearinghouse queries (see 49 CFR Parts 382 and 391). For owner-operators and lease partners we may also collect equipment, insurance, tax (e.g., W-9) and banking information needed for settlements. We do <strong>not</strong> collect Social Security numbers or financial account numbers through this website's forms.</p>
+              <h3>3.3 Information collected automatically</h3>
+              <p>When you visit the website, our servers and service providers may automatically log your IP address, browser type, device type, operating system, referring page, pages viewed, and the date and time of your visit. See <a className="link" href="#cookies">Section 7</a>.</p>
+              <h3>3.4 Information from other sources</h3>
+              <p>With your authorization where the law requires it, we receive information from previous DOT-regulated employers (safety performance history under 49 CFR 391.23), consumer reporting agencies, FMCSA systems (PSP and the Clearinghouse), drug-testing laboratories and medical review officers, state licensing agencies, references you provide, and job boards or recruiting partners you applied through. Background checks performed by consumer reporting agencies are conducted only after we give you a separate written disclosure and obtain your written authorization as required by the Fair Credit Reporting Act (FCRA).</p>
+    
+              <h2 id="use">4. How we use information</h2>
+              <ul>
+                <li>To review and respond to your application or inquiry and to contact you by phone, email and — only if you opted in — text message.</li>
+                <li>To schedule interviews, orientation and onboarding, and to send application status and job-related updates.</li>
+                <li>To verify qualifications and meet our legal obligations as a motor carrier, including driver qualification, drug and alcohol testing, hours-of-service and recordkeeping requirements of the U.S. Department of Transportation.</li>
+                <li>To operate, secure and improve the website and our Services, detect fraud and abuse, and fix errors.</li>
+                <li>To keep records of consent and opt-out requests and honor them.</li>
+                <li>To comply with law, legal process and lawful government requests, and to establish, exercise or defend legal claims.</li>
+              </ul>
+              <p>We do not use your personal information to make decisions based solely on automated processing that produce legal or similarly significant effects about you. We do not sell personal information, and we do not share personal information for cross-context behavioral advertising.</p>
+    
+              <h2 id="share">5. How we share information</h2>
+              <p>We share personal information only as described below, and only to the extent needed for the stated purpose:</p>
+              <ul>
+                <li><strong>Service providers</strong> that process information on our behalf under contracts that limit their use of it — for example website hosting, form processing, applicant-tracking, email, and our telecommunications and messaging platform provider (such as RingCentral), which delivers our calls and text messages.</li>
+                <li><strong>Screening providers</strong> such as consumer reporting agencies, drug and alcohol testing laboratories, collection sites, medical review officers and third-party administrators, when you continue in the hiring process and have authorized the checks.</li>
+                <li><strong>Government agencies</strong> such as the FMCSA, the U.S. DOT and state licensing agencies, where required by law (for example, Clearinghouse reporting).</li>
+                <li><strong>Other DOT-regulated employers</strong> who request your safety performance history with your authorization, as required by 49 CFR 391.23.</li>
+                <li><strong>Insurers and professional advisers</strong> (such as lawyers and accountants) where reasonably necessary.</li>
+                <li><strong>Legal and safety</strong>: to comply with law, subpoenas or court orders, or to protect the rights, property and safety of Wildfire Express, our drivers, the public or others.</li>
+                <li><strong>Business transfers</strong>: in connection with a merger, acquisition, financing or sale of assets, subject to the protections in Section 6.</li>
+              </ul>
+              <p><strong>None of the sharing described in this Section 5 includes text messaging originator opt-in data and consent, or your mobile phone number collected for our SMS program, for marketing or promotional purposes.</strong></p>
+    
+              <h2 id="sms">6. Text messaging (SMS) privacy</h2>
+              <div className="callout">
+                <p><strong>No mobile information will be shared with third parties or affiliates for marketing or promotional purposes.</strong> Information sharing with subcontractors in support services, such as customer service and the messaging platform that delivers our texts, is permitted only to provide the Services to you. All other categories of sharing in this policy exclude text messaging originator opt-in data and consent; <strong>this information will not be shared with any third parties.</strong></p>
+              </div>
+              <ul>
+                <li>We send text messages only to people who have given prior express consent — for example, by checking the optional, unchecked SMS box on our driver application form. Consent to receive text messages is never a condition of employment, of submitting an application, or of any purchase.</li>
+                <li>We use your mobile number and SMS consent only to send the messages you agreed to receive (application status, interview and orientation scheduling, onboarding reminders, job-related updates and replies to your inquiries) and to keep records of your consent and opt-out.</li>
+                <li>We do not sell, rent, loan or trade mobile numbers or SMS opt-in data, and we do not use them for third-party marketing.</li>
+                <li>You can opt out at any time by replying <strong>STOP</strong> (or STOP ALL, UNSUBSCRIBE, CANCEL, END, QUIT, REVOKE or OPT OUT), or by telling us in any other reasonable way, such as calling +1 (513) 206-5093 or emailing hr@wildfireexpress.com. We honor opt-out requests promptly and in any event within the time required by law. Reply <strong>HELP</strong> for help.</li>
+                <li>Message frequency varies. Message and data rates may apply. Carriers are not liable for delayed or undelivered messages.</li>
+              </ul>
+              <p>The full terms of our text messaging program are in the <Link className="link" href="/terms#sms">SMS Terms</Link> section of our Terms &amp; Conditions.</p>
+    
+              <h2 id="cookies">7. Cookies &amp; analytics</h2>
+              <p>The website uses only the cookies and similar browser storage that are necessary for it to function and remember basic preferences. If we add analytics tools, they will be used to understand aggregate website use, not to build advertising profiles, and this policy will be updated before they are enabled. You can block or delete cookies in your browser settings; parts of the site may not work properly if you do.</p>
+              <p>We treat a browser's <strong>Global Privacy Control (GPC)</strong> signal as a valid request to opt out of any sale or sharing of personal information for that browser, where state law requires it. Because we do not sell or share personal information for targeted advertising, no further action is needed on your part.</p>
+    
+              <h2 id="retention">8. Data retention</h2>
+              <p>We keep personal information only as long as needed for the purposes described above and as required by law, including:</p>
+              <ul>
+                <li><strong>Applications and recruiting records</strong> of applicants who are not hired: generally at least one year from the date of the decision (29 CFR 1602.14), and longer when needed for an ongoing legal matter.</li>
+                <li><strong>Driver qualification files</strong> of hired drivers: for the duration of employment plus three years (49 CFR 391.51); drug and alcohol testing records for one to five years depending on the record type (49 CFR 382.401); safety performance history records as required by 49 CFR 391.53.</li>
+                <li><strong>SMS consent and opt-out records</strong>: for at least five years after your last message from us, so we can demonstrate consent and honor opt-outs.</li>
+                <li><strong>Website logs</strong>: generally no more than 12 months, unless needed for security investigations.</li>
+              </ul>
+              <p>When information is no longer needed, we delete or de-identify it.</p>
+    
+              <h2 id="security">9. Security</h2>
+              <p>We use reasonable administrative, technical and physical safeguards designed to protect personal information, including encrypted connections (HTTPS) on this website, access controls limited to staff who need the information, and contractual obligations on our service providers. No method of transmission or storage is completely secure, so we cannot guarantee absolute security. If a data breach affects your personal information, we will notify you and regulators as required by applicable law.</p>
+    
+              <h2 id="rights">10. Your choices &amp; rights</h2>
+              <ul>
+                <li><strong>Text messages:</strong> reply STOP to any message, or contact us, to stop texts. Reply HELP for help.</li>
+                <li><strong>Email:</strong> use the unsubscribe link in any non-transactional email, or contact us.</li>
+                <li><strong>Calls:</strong> ask to be placed on our internal do-not-call list during any call, or contact us.</li>
+                <li><strong>Access, correction and deletion:</strong> you may ask to know what personal information we hold about you, to correct it, or to delete it. We will honor requests as required by applicable law, subject to records we must keep under federal motor carrier and employment law.</li>
+                <li><strong>State privacy rights:</strong> depending on where you live (for example California, Colorado, Connecticut, Oregon, Texas, Virginia and other states with comprehensive privacy laws), and to the extent those laws apply to us, you may have additional rights, including the right to obtain a copy of your data in a portable format, to opt out of sale, sharing, targeted advertising and certain profiling, to limit the use of sensitive personal information, and to appeal our decision on your request.</li>
+                <li><strong>FCRA rights:</strong> if we take adverse action based in whole or in part on a consumer report, we will provide the notices and a summary of your rights required by the FCRA.</li>
+              </ul>
+              <p><strong>How to make a request:</strong> email <a className="link" href="mailto:hr@wildfireexpress.com">hr@wildfireexpress.com</a> or call <a className="link" href="tel:+15132065093">+1 (513) 206-5093</a>. We will verify your identity by matching information you provide with information we hold, and we will respond within the time required by law (generally 45 days). You may use an authorized agent where state law allows; we may require proof of the agent's authority. If we deny your request, you may appeal by replying to our decision with the subject line "Privacy Appeal"; if you remain unsatisfied, you may contact your state attorney general. We will not discriminate or retaliate against you for exercising your privacy rights.</p>
+    
+              <h2 id="california">11. Notice for California residents</h2>
+              <p>To the extent the California Consumer Privacy Act, as amended (CCPA), applies to us, this policy serves as our notice at collection. In the past 12 months we collected the categories described in Section 3: identifiers; personal records described in Cal. Civ. Code § 1798.80(e); professional or employment-related information; internet or other electronic network activity; and, during the later hiring stages, sensitive personal information such as Social Security, driver's license and health information (DOT medical and drug-testing results) — used only for hiring, legal compliance and the other permitted purposes in Section 4, and not to infer characteristics about you. Sources, purposes, recipients and retention periods are described in Sections 3, 4, 5 and 8. We do not sell or share (as those terms are defined by the CCPA) personal information, including of consumers under 16. California residents may also request information about disclosures for direct-marketing purposes under Cal. Civ. Code § 1798.83; we do not make such disclosures.</p>
+    
+              <h2 id="children">12. Children</h2>
+              <p>Our Services are intended for adults. Interstate commercial drivers must be at least 21 years old (49 CFR 391.11). We do not knowingly collect personal information from anyone under 18, and we will delete such information if we learn we have collected it.</p>
+    
+              <h2 id="links">13. Third-party links</h2>
+              <p>The website may link to sites operated by others (for example the FMCSA SAFER system). We are not responsible for their privacy practices; please read their policies.</p>
+    
+              <h2 id="changes">14. Changes to this policy</h2>
+              <p>We may update this policy from time to time. We will post the updated version on this page with a new "Last updated" date and, where the change is material, provide additional notice (for example on the website or by email). Changes will not reduce your rights regarding information collected under a prior version without your consent where such consent is required by law. Any change in how we use SMS opt-in data will require your new consent.</p>
+    
+              <h2 id="contact">15. Contact us</h2>
+              <p><strong>Wildfire Express LLC</strong><br />
+                Attn: Privacy<br />
+                <span className="addr">{COMPANY.address}</span><br />
+                Phone: <a className="link" href="tel:+15132065093">+1 (513) 206-5093</a><br />
+                Email: <a className="link" href="mailto:hr@wildfireexpress.com">hr@wildfireexpress.com</a><br />
+                USDOT 3498707 · MC 1154036</p>
+            </div>
+          </div>
+        </section>
+    </>
+  );
+}

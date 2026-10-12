@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Apply in 90 Seconds — CDL-A Driver Application | Wildfire Express</title>
+  <meta name="description" content="Apply to drive with Wildfire Express LLC in 90 seconds: choose your lane, share your experience and a recruiter will call you back.">
+  <meta name="theme-color" content="#141210">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="importmap">{"imports":{"three":"./vendor/three/three.module.min.js","three/addons/":"./vendor/three/addons/"}}</script>
+  <script type="module" src="js/world.js"></script>
+  <script defer src="js/site.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="poster" aria-hidden="true"></div>
+  <div class="vignette" aria-hidden="true"></div>
+  <div class="loader" data-loader aria-hidden="true"><span>Loading the rig</span></div>
+<!-- @header -->
+<header class="site-header">
+  <div class="bar">
+    <a class="brand" href="index.html" aria-label="Wildfire Express home">
+      <img src="assets/mark.png" alt="" width="46" height="26">
+      <span><b>Wildfire Express</b><small>OTR · DRY VAN · 48 STATES</small></span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="company-drivers.html">Company Drivers</a>
+      <a href="owner-operators.html">Owner-Operators</a>
+      <a href="careers.html">Careers</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a class="head-phone" href="tel:+15132065093">+1 (513) 206-5093</a>
+    <a class="btn" href="apply.html" aria-current="page">Apply in 90 sec <span class="arr" aria-hidden="true">→</span></a>
+    <button class="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="Open menu"><span></span></button>
+  </div>
+</header>
+<div class="menu" id="menu" aria-hidden="true">
+  <nav aria-label="Mobile">
+    <a href="index.html">Home <small>01</small></a>
+    <a href="about.html">About <small>02</small></a>
+    <a href="services.html">Services <small>03</small></a>
+    <a href="company-drivers.html">Company Drivers <small>04</small></a>
+    <a href="owner-operators.html">Owner-Operators <small>05</small></a>
+    <a href="careers.html">Careers <small>06</small></a>
+    <a href="contact.html">Contact <small>07</small></a>
+  </nav>
+  <div class="menu-foot">
+    <a class="btn btn-block" href="apply.html" aria-current="page">Apply in 90 sec <span class="arr" aria-hidden="true">→</span></a>
+    <a class="head-phone" href="tel:+15132065093">Dispatch 24/7 · +1 (513) 206-5093</a>
+  </div>
+</div>
+<!-- /@header -->
+
+  <main id="main">
+    <section class="scene scene--top" data-shot="rear" aria-labelledby="apply-title">
+      <div class="container">
+        <div class="panel panel--strong" style="max-width: 760px">
+          <div>
+            <p class="kicker">Driver application</p>
+            <h1 id="apply-title" class="h2">Apply in <em>90 seconds.</em></h1>
+            <p class="muted mt-s">Three quick steps. No documents, no SSN — a recruiter collects the DOT paperwork later.</p>
+
+            <div class="mt-m">
+              <p class="steps-label" data-step-label aria-live="polite">Step <b>1</b> of 3 · Lane</p>
+              <div class="progress" aria-hidden="true"><i></i></div>
+            </div>
+
+            <form id="apply-form" class="form" novalidate>
+              <!-- Step 1: lane -->
+              <div class="form-step" data-step="1">
+                <fieldset data-role>
+                  <legend class="legend">Which lane fits you?</legend>
+                  <div class="choices">
+                    <label class="choice"><input type="radio" name="role" value="owner"><span><b>Owner-operator</b><small>I have my own truck · keep 88%</small></span></label>
+                    <label class="choice"><input type="radio" name="role" value="company"><span><b>Company driver</b><small>Drive our late-model Volvo</small></span></label>
+                    <label class="choice"><input type="radio" name="role" value="partner"><span><b>Lease partner</b><small>Lease toward owning a truck</small></span></label>
+                  </div>
+                  <p class="err" role="alert"></p>
+                </fieldset>
+                <fieldset data-cdl class="mt-m">
+                  <legend class="legend">Do you hold a valid Class A CDL?</legend>
+                  <div class="chips">
+                    <label class="chip"><input type="radio" name="cdl" value="yes"><span>Yes</span></label>
+                    <label class="chip"><input type="radio" name="cdl" value="no"><span>No</span></label>
+                  </div>
+                  <p class="err" role="alert"></p>
+                  <p class="fine mt-s" data-cdl-note hidden>All of our driving positions require a Class A CDL. You can still apply — we'll keep your details on file and reach out when you're licensed.</p>
+                </fieldset>
+                <div class="form-nav mt-m">
+                  <span></span>
+                  <button class="btn btn--solid btn-block-sm" type="button" data-next>Continue <span class="arr" aria-hidden="true">→</span></button>
+                </div>
+              </div>
+
+              <!-- Step 2: experience -->
+              <div class="form-step" data-step="2" hidden>
+                <fieldset data-exp>
+                  <legend class="legend">Verifiable tractor-trailer experience</legend>
+                  <div class="chips">
+                    <label class="chip"><input type="radio" name="experience" value="<1"><span>Under 1 year</span></label>
+                    <label class="chip"><input type="radio" name="experience" value="1-2"><span>1 – 2 years</span></label>
+                    <label class="chip"><input type="radio" name="experience" value="2-5"><span>2 – 5 years</span></label>
+                    <label class="chip"><input type="radio" name="experience" value="5+"><span>5+ years</span></label>
+                  </div>
+                  <p class="err" role="alert"></p>
+                </fieldset>
+                <div class="field mt-m">
+                  <label for="state">Home state</label>
+                  <select id="state" name="state" class="input" autocomplete="address-level1">
+                    <option value="">Select your state</option>
+                    <option>Alabama</option><option>Alaska</option><option>Arizona</option><option>Arkansas</option><option>California</option><option>Colorado</option><option>Connecticut</option><option>Delaware</option><option>District of Columbia</option><option>Florida</option><option>Georgia</option><option>Hawaii</option><option>Idaho</option><option>Illinois</option><option>Indiana</option><option>Iowa</option><option>Kansas</option><option>Kentucky</option><option>Louisiana</option><option>Maine</option><option>Maryland</option><option>Massachusetts</option><option>Michigan</option><option>Minnesota</option><option>Mississippi</option><option>Missouri</option><option>Montana</option><option>Nebraska</option><option>Nevada</option><option>New Hampshire</option><option>New Jersey</option><option>New Mexico</option><option>New York</option><option>North Carolina</option><option>North Dakota</option><option>Ohio</option><option>Oklahoma</option><option>Oregon</option><option>Pennsylvania</option><option>Rhode Island</option><option>South Carolina</option><option>South Dakota</option><option>Tennessee</option><option>Texas</option><option>Utah</option><option>Vermont</option><option>Virginia</option><option>Washington</option><option>West Virginia</option><option>Wisconsin</option><option>Wyoming</option>
+                  </select>
+                  <p class="err" role="alert"></p>
+                </div>
+                <div class="form-nav mt-m">
+                  <button class="btn btn--ghost" type="button" data-back>← Back</button>
+                  <button class="btn btn--solid" type="button" data-next>Continue <span class="arr" aria-hidden="true">→</span></button>
+                </div>
+              </div>
+
+              <!-- Step 3: contact -->
+              <div class="form-step" data-step="3" hidden>
+                <p class="legend">How do we reach you?</p>
+                <div class="two">
+                  <div class="field">
+                    <label for="first">First name</label>
+                    <input id="first" name="first" class="input" type="text" autocomplete="given-name" required>
+                    <p class="err" role="alert"></p>
+                  </div>
+                  <div class="field">
+                    <label for="last">Last name</label>
+                    <input id="last" name="last" class="input" type="text" autocomplete="family-name" required>
+                    <p class="err" role="alert"></p>
+                  </div>
+                </div>
+                <div class="two">
+                  <div class="field">
+                    <label for="phone">Mobile phone</label>
+                    <input id="phone" name="phone" class="input" type="tel" inputmode="tel" autocomplete="tel-national" placeholder="(555) 555-5555" required>
+                    <p class="err" role="alert"></p>
+                  </div>
+                  <div class="field">
+                    <label for="email">Email <span class="muted" style="text-transform:none;letter-spacing:0">(optional)</span></label>
+                    <input id="email" name="email" class="input" type="email" inputmode="email" autocomplete="email">
+                    <p class="err" role="alert"></p>
+                  </div>
+                </div>
+
+                <!-- SMS consent: optional, unchecked by default, separate from Terms/Privacy (A2P 10DLC / CTIA) -->
+                <div class="consent-box" data-sms-consent>
+                  <label class="check">
+                    <input type="checkbox" name="sms_consent" value="yes">
+                    <span>Yes, I agree to receive recurring automated text messages from <strong>Wildfire Express LLC</strong> at the mobile number provided about my driver application, interview scheduling, onboarding and job-related updates. Consent is not a condition of employment or of submitting this application. Message frequency varies. Message &amp; data rates may apply. Reply <strong>HELP</strong> for help or <strong>STOP</strong> to opt out at any time. See our <a href="privacy.html" target="_blank">Privacy Policy</a> and <a href="terms.html#sms" target="_blank">SMS Terms</a>.</span>
+                  </label>
+                </div>
+                <p class="fine">By submitting this application you agree to our <a href="terms.html">Terms &amp; Conditions</a> and acknowledge our <a href="privacy.html">Privacy Policy</a>. A recruiter may call you at the number provided about your application. Checking the text-message box is optional.</p>
+                <p class="err" data-submit-err role="alert"></p>
+                <div class="form-nav">
+                  <button class="btn btn--ghost" type="button" data-back>← Back</button>
+                  <button class="btn btn--solid" type="submit">Submit application <span class="arr" aria-hidden="true">→</span></button>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <div id="apply-success" class="success" hidden>
+            <p class="kicker">Application received</p>
+            <h2 class="h2">You're in line, <em data-name>driver</em>.</h2>
+            <span class="outline-num mt-m" aria-hidden="true">15:00</span>
+            <p class="lede mt-m">A recruiter will call within 15 minutes during business hours (Mon–Fri), or first thing the next business morning. Keep your phone close — the call comes from +1 (513) 206-5093.</p>
+            <div class="btn-row">
+              <a class="btn" href="index.html">Back to home</a>
+              <a class="btn btn--ghost" href="tel:+15132065093">Call us now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+<!-- @footer -->
+<footer class="site-footer">
+  <section class="footer-cta" data-shot="road" aria-labelledby="footer-cta-title">
+    <div class="container">
+      <div class="panel reveal">
+        <p class="kicker">Your next lane</p>
+        <h2 id="footer-cta-title">Apply once. <em>Run for years.</em></h2>
+        <p class="lede mt-m">Ninety seconds online, one call from a real recruiter, and you could be under a load next week.</p>
+        <div class="btn-row">
+          <a class="btn btn--solid" href="apply.html">Start my application <span class="arr" aria-hidden="true">→</span></a>
+          <a class="btn btn--ghost" href="tel:+15132065093">+1 (513) 206-5093</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="footer-main">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="about">
+          <a class="brand" href="index.html" aria-label="Wildfire Express home">
+            <img src="assets/mark.png" alt="" width="46" height="26">
+            <span><b>Wildfire Express</b><small>OTR · DRY VAN · 48 STATES</small></span>
+          </a>
+          <p>Wildfire Express LLC is a 53′ dry van over-the-road carrier hauling freight across the lower 48 states.</p>
+          <div class="authority"><span>USDOT 3498707</span><span>MC 1154036</span></div>
+        </div>
+        <div>
+          <h3>Company</h3>
+          <ul>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Drivers</h3>
+          <ul>
+            <li><a href="company-drivers.html">Company driver offer</a></li>
+            <li><a href="owner-operators.html">Owner-operators</a></li>
+            <li><a href="careers.html#partner">Lease partners</a></li>
+            <li><a href="apply.html">Apply now</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Reach us</h3>
+          <ul>
+            <li><a href="tel:+15132065093">+1 (513) 206-5093</a></li>
+            <li><a href="contact.html">Dispatch 24/7</a></li>
+            <li><a href="mailto:hr@wildfireexpress.com">hr@wildfireexpress.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-year>2026</span> Wildfire Express LLC. All rights reserved.</span>
+        <nav aria-label="Legal">
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms &amp; Conditions</a>
+          <a href="terms.html#sms">SMS Terms</a>
+        </nav>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- /@footer -->
+</body>
+</html>
