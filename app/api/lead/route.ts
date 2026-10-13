@@ -33,6 +33,7 @@ export async function POST(req: Request) {
   if (kind === 'application') {
     for (const f of ['role', 'cdl_a', 'experience', 'home_state', 'first_name']) if (!fields[f]) errors.push(`${f} is required`);
     if (!validPhone(phone)) errors.push('phone is invalid');
+    if (body.sms_consent !== true) errors.push('sms_consent is required');
   } else {
     if (!fields.name) errors.push('name is required');
     if (!fields.message) errors.push('message is required');

@@ -60,7 +60,7 @@ becomes a key; `data-drag` on a section enables drag-to-orbit (company-drivers h
 
 | Requirement | Where |
 | --- | --- |
-| Opt-in checkbox optional, unchecked, separate from Terms/Privacy | `components/SmsConsent.tsx` (apply + contact) |
+| Opt-in checkbox never pre-checked, separate from Terms/Privacy. On `/apply` it is **required** (owner's decision; a phone application path is offered instead) — reviewers may flag mandatory opt-in | `components/ApplyForm.tsx`, enforced again in `app/api/lead/route.ts` |
 | Disclosure: brand, message types, frequency, msg & data rates, HELP/STOP, links, "not a condition…" | same |
 | Privacy: mobile info / opt-in data not shared with third parties or affiliates for marketing | `/privacy` callout, §5, §6 |
 | SMS Terms: program, opt-in, frequency, rates, STOP/HELP, carrier disclaimer, samples, contact | `/terms#sms` |
