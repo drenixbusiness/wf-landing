@@ -5,7 +5,7 @@ import { COMPANY } from '@/lib/site';
 export default function Footer() {
   return (
     <footer className="site-footer">
-      <FooterCta>
+      <FooterCta part="cta">
       <section className="footer-cta" data-shot="road" aria-labelledby="footer-cta-title">
         <div className="container container--wide">
           <div className="cta-center reveal">

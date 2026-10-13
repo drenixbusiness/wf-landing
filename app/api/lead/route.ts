@@ -33,7 +33,6 @@ export async function POST(req: Request) {
   if (kind === 'application') {
     for (const f of ['role', 'cdl_a', 'experience', 'home_state', 'first_name']) if (!fields[f]) errors.push(`${f} is required`);
     if (!validPhone(phone)) errors.push('phone is invalid');
-    if (body.sms_consent !== true) errors.push('sms_consent is required');
   } else {
     if (!fields.name) errors.push('name is required');
     if (!fields.message) errors.push('message is required');
@@ -50,13 +49,15 @@ export async function POST(req: Request) {
     ...fields,
     phone_e164: phone ? `+1${normalizePhone(phone)}` : '',
     consent: {
+      // Recorded only when the box was checked. sms_consent=false means: never text this number from any automation.
       sms_consent: smsConsent,
       // the server-side copy of the wording is the source of truth, not what the client sent
       sms_consent_text: smsConsent ? SMS_CONSENT[kind] : '',
-      consent_timestamp: new Date().toISOString(),
-      consent_page: String(body.consent_page ?? '').slice(0, 500),
-      ip: req.headers.get('x-forwarded-for')?.split(',')[0]?.trim() ?? '',
-      user_agent: req.headers.get('user-agent') ?? '',
+      consent_timestamp: smsConsent ? new Date().toISOString() : '', // UTC
+      consent_page: smsConsent ? String(body.consent_page ?? '').slice(0, 500) : '',
+      ip: smsConsent ? req.headers.get('x-forwarded-for')?.split(',')[0]?.trim() ?? '' : '',
+      user_agent: smsConsent ? req.headers.get('user-agent') ?? '' : '',
+      mobile_number: smsConsent ? `+1${normalizePhone(phone)}` : '',
     },
   };
 

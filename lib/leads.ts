@@ -2,7 +2,7 @@
 
 export const SMS_CONSENT = {
   application:
-    'Yes, I agree to receive recurring automated text messages from Wildfire Express LLC at the mobile number provided about my driver application, interview scheduling, onboarding and job-related updates. Agreeing is required to apply online; it is not a condition of employment — you can also apply by phone at +1 (513) 206-5093. Message frequency varies. Message & data rates may apply. Reply HELP for help or STOP to opt out at any time. See our Privacy Policy and SMS Terms.',
+    'Yes, Wildfire Express LLC may text me at the mobile number above about my application, interviews, orientation and onboarding. Recurring automated messages; frequency varies (up to about 10/week). Msg & data rates may apply. Reply STOP to opt out, HELP for help. Consent is not a condition of applying or being hired. See SMS Terms and Privacy Policy.',
   contact:
     'Yes, I agree to receive text messages from Wildfire Express LLC at the phone number provided in reply to this inquiry, including recruiting and customer-care follow-ups. Consent is not a condition of any purchase or employment. Message frequency varies. Message & data rates may apply. Reply HELP for help or STOP to opt out. See our Privacy Policy and SMS Terms.',
 } as const;

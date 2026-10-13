@@ -51,7 +51,7 @@ becomes a key; `data-drag` on a section enables drag-to-orbit (company-drivers h
    **Map** — `NEXT_PUBLIC_CARTO_KEY` (CARTO basemap, recoloured in `components/OfficeMap.tsx`).
    Each lead includes a `consent` object: SMS opt-in yes/no, the exact wording (server-side copy), timestamp, page,
    IP and user agent — store it as proof of opt-in.
-4. **Site URL** — set `NEXT_PUBLIC_SITE_URL` (e.g. `https://wildfireexpress.com`) for canonical URLs and the sitemap.
+4. **Site URL** — set `NEXT_PUBLIC_SITE_URL` (canonical: `https://wildfire-express.com`) for canonical URLs, robots and the sitemap. `wildfireexpress.com` / `www.wildfireexpress.com` 301-redirect to it from `next.config.ts` once those hosts point at this deployment.
 5. **Copy** — pay ranges, statistics, benefits, requirements and the two driver quotes are placeholders. Replace them
    with real, verifiable figures and real testimonials (with permission).
 6. **Legal review** — have an attorney review the Privacy Policy and Terms before publishing.

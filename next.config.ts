@@ -2,6 +2,15 @@ import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
+  // one canonical domain: the hyphen-less variant permanently redirects to wildfire-express.com
+  async redirects() {
+    return ['wildfireexpress.com', 'www.wildfireexpress.com'].map((host) => ({
+      source: '/:path*',
+      has: [{ type: 'host' as const, value: host }],
+      destination: 'https://wildfire-express.com/:path*',
+      permanent: true,
+    }));
+  },
   async headers() {
     return [
       {

@@ -1037,4 +1037,4 @@ select.apply-input option { background: var(--ground-2); }
 /* placeholders: quiet, in the body face, never mistaken for a filled value */
 .apply-input::placeholder, .input::placeholder { color: rgba(243, 242, 242, .34); opacity: 1; font-family: var(--body); }
 .apply-input:focus::placeholder, .input:focus::placeholder { color: rgba(243, 242, 242, .22); }
-.apply-consent.is-invalid input { outline: 1px solid #e0795a; outline-offset: 2px; }
+.apply-fine--submit { margin-top: 16px; line-height: 1.55; }

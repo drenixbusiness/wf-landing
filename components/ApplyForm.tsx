@@ -24,7 +24,7 @@ const EXPERIENCE = [
 const STATES = ['Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California', 'Colorado', 'Connecticut', 'Delaware', 'District of Columbia', 'Florida', 'Georgia', 'Hawaii', 'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Louisiana', 'Maine', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota', 'Mississippi', 'Missouri', 'Montana', 'Nebraska', 'Nevada', 'New Hampshire', 'New Jersey', 'New Mexico', 'New York', 'North Carolina', 'North Dakota', 'Ohio', 'Oklahoma', 'Oregon', 'Pennsylvania', 'Rhode Island', 'South Carolina', 'South Dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont', 'Virginia', 'Washington', 'West Virginia', 'Wisconsin', 'Wyoming'];
 const STEPS = ['Lane', 'Experience', 'Contact'];
 
-type Key = 'role' | 'cdl' | 'experience' | 'state' | 'name' | 'phone' | 'email' | 'sms' | 'submit';
+type Key = 'role' | 'cdl' | 'experience' | 'state' | 'name' | 'phone' | 'email' | 'submit';
 
 export default function ApplyForm() {
   const [step, setStep] = useState(0);
@@ -67,7 +67,6 @@ export default function ApplyForm() {
       if (v.name.trim().length < 2) e.name = 'Enter your full name.';
       if (!validPhone(v.phone)) e.phone = 'Enter a 10-digit US phone number.';
       if (v.email && !validEmail(v.email.trim())) e.email = 'Check the email address.';
-      if (!sms) e.sms = `Check the box to agree to text messages — or call ${COMPANY.phone} to apply by phone.`;
     }
     setErrors(e);
     const first = Object.keys(e)[0];
@@ -197,20 +196,16 @@ export default function ApplyForm() {
               <input id="email" className="apply-input" type="email" placeholder="you@example.com" inputMode="email" autoComplete="email" value={v.email} aria-invalid={!!errors.email} onChange={(e) => set('email')(e.target.value)} />
               {err('email')}
             </div>
-            {/* required, never pre-checked SMS opt-in for the online application — wording must match SMS_CONSENT.application */}
-            <label className={`apply-consent${errors.sms ? ' is-invalid' : ''}`} data-field="sms" data-sms-consent="">
-              <input type="checkbox" name="sms_consent" required aria-required="true" aria-invalid={!!errors.sms} checked={sms}
-                onChange={(e) => { setSms(e.target.checked); setErrors((x) => ({ ...x, sms: undefined })); }} />
+            {/* optional, unchecked SMS opt-in (A2P 10DLC) — wording must match SMS_CONSENT.application */}
+            <label className="apply-consent" data-sms-consent="">
+              <input type="checkbox" name="sms_consent" checked={sms} onChange={(e) => setSms(e.target.checked)} />
               <span>
-                Yes, I agree to receive recurring automated text messages from Wildfire Express LLC at the mobile number provided about my
-                driver application, interview scheduling, onboarding and job-related updates. Agreeing is required to apply online; it is not
-                a condition of employment — you can also apply by phone at {COMPANY.phone}. Message frequency varies. Message &amp; data rates may apply. Reply HELP for help or STOP to opt
-                out at any time. See our <Link href="/privacy" target="_blank">Privacy Policy</Link> and{' '}
-                <Link href="/terms#sms" target="_blank">SMS Terms</Link>.
+                Yes, Wildfire Express LLC may text me at the mobile number above about my application, interviews, orientation and
+                onboarding. Recurring automated messages; frequency varies (up to about 10/week). Msg &amp; data rates may apply. Reply STOP
+                to opt out, HELP for help. Consent is not a condition of applying or being hired. See{' '}
+                <Link href="/terms#sms" target="_blank">SMS Terms</Link> and <Link href="/privacy" target="_blank">Privacy Policy</Link>.
               </span>
             </label>
-            {err('sms')}
-            <p className="apply-fine">By submitting you agree to our <Link href="/terms">Terms</Link> and acknowledge our <Link href="/privacy">Privacy Policy</Link>. A recruiter may call you about your application.</p>
             {err('submit')}
           </div>
         )}
@@ -223,6 +218,11 @@ export default function ApplyForm() {
             {step < 2 ? <>Continue <span className="arr" aria-hidden="true">→</span></> : sending ? 'Sending…' : <>Submit application <span className="arr" aria-hidden="true">→</span></>}
           </button>
         </div>
+        {step === 2 && (
+          <p className="apply-fine apply-fine--submit">
+            By submitting, you agree to our <Link href="/terms">Terms</Link> and <Link href="/privacy">Privacy Policy</Link> and authorize us to call or email you about your application.
+          </p>
+        )}
       </form>
     </div>
   );

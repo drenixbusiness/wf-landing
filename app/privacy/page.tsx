@@ -18,7 +18,7 @@ export default function Page() {
             <div className="panel panel--strong panel--wide legal">
               <p className="kicker">Legal</p>
               <h1 id="pp-title" className="h2">Privacy <em>Policy.</em></h1>
-              <p className="meta mt-s">Effective date: <time dateTime="2026-10-12">October 12, 2026</time> · Last updated: <time dateTime="2026-10-12">October 12, 2026</time></p>
+              <p className="meta mt-s">Effective date: <time dateTime="2026-10-12">October 12, 2026</time> · Last updated: <time dateTime="2026-10-14">October 14, 2026</time></p>
     
               <div className="callout">
                 <p><strong>Text messaging privacy in short:</strong> No mobile information will be shared with third parties or affiliates for marketing or promotional purposes. Text messaging originator opt-in data and consent will not be shared with any third parties. You can opt out of text messages at any time by replying <strong>STOP</strong>. Details are in <a className="link" href="#sms">Section 6</a>.</p>
@@ -90,13 +90,14 @@ export default function Page() {
                 <li><strong>Business transfers</strong>: in connection with a merger, acquisition, financing or sale of assets, subject to the protections in Section 6.</li>
               </ul>
               <p><strong>None of the sharing described in this Section 5 includes text messaging originator opt-in data and consent, or your mobile phone number collected for our SMS program, for marketing or promotional purposes.</strong></p>
+              <p>Personal information may be processed and stored in the United States and in other countries where our personnel or service providers operate, subject to contractual and technical safeguards.</p>
     
               <h2 id="sms">6. Text messaging (SMS) privacy</h2>
               <div className="callout">
                 <p><strong>No mobile information will be shared with third parties or affiliates for marketing or promotional purposes.</strong> Information sharing with subcontractors in support services, such as customer service and the messaging platform that delivers our texts, is permitted only to provide the Services to you. All other categories of sharing in this policy exclude text messaging originator opt-in data and consent; <strong>this information will not be shared with any third parties.</strong></p>
               </div>
               <ul>
-                <li>We send text messages only to people who have given prior express consent — for example, by checking the SMS box (never pre-checked) on our online driver application form. Agreeing to text messages is required to apply online, but it is never a condition of employment or of any purchase: you can apply by phone at +1 (513) 206-5093 instead.</li>
+                <li>We send text messages only to people who have given prior express consent — for example, by checking the optional, unchecked SMS box on our online driver application form. Agreeing to text messages is optional and is never a condition of applying, employment or any purchase. You can apply online without it, or by phone at +1 (513) 206-5093.</li>
                 <li>We use your mobile number and SMS consent only to send the messages you agreed to receive (application status, interview and orientation scheduling, onboarding reminders, job-related updates and replies to your inquiries) and to keep records of your consent and opt-out.</li>
                 <li>We do not sell, rent, loan or trade mobile numbers or SMS opt-in data, and we do not use them for third-party marketing.</li>
                 <li>You can opt out at any time by replying <strong>STOP</strong> (or STOP ALL, UNSUBSCRIBE, CANCEL, END, QUIT, REVOKE or OPT OUT), or by telling us in any other reasonable way, such as calling +1 (513) 206-5093 or emailing hr@wildfireexpress.com. We honor opt-out requests promptly and in any event within the time required by law. Reply <strong>HELP</strong> for help.</li>
@@ -107,6 +108,7 @@ export default function Page() {
               <h2 id="cookies">7. Cookies &amp; analytics</h2>
               <p>The website uses only the cookies and similar browser storage that are necessary for it to function and remember basic preferences. If we add analytics tools, they will be used to understand aggregate website use, not to build advertising profiles, and this policy will be updated before they are enabled. You can block or delete cookies in your browser settings; parts of the site may not work properly if you do.</p>
               <p>We treat a browser's <strong>Global Privacy Control (GPC)</strong> signal as a valid request to opt out of any sale or sharing of personal information for that browser, where state law requires it. Because we do not sell or share personal information for targeted advertising, no further action is needed on your part.</p>
+              <p>Our website does not respond to "Do Not Track" browser signals because it does not track visitors across other websites. We do honor Global Privacy Control as described above.</p>
     
               <h2 id="retention">8. Data retention</h2>
               <p>We keep personal information only as long as needed for the purposes described above and as required by law, including:</p>

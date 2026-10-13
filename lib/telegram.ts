@@ -11,7 +11,10 @@ export interface TgLead {
   form: 'application' | 'contact';
   received_at: string;
   phone_e164: string;
-  consent: { sms_consent: boolean; consent_page: string; ip: string };
+  consent: {
+    sms_consent: boolean; sms_consent_text: string; consent_timestamp: string;
+    consent_page: string; ip: string; user_agent: string; mobile_number: string;
+  };
   [k: string]: unknown;
 }
 
@@ -41,10 +44,22 @@ function format(l: TgLead) {
         '',
         `<b>Message:</b>\n${esc(l.message)}`,
       ];
+  const c = l.consent;
   lines.push(
     '',
-    row('SMS consent', l.consent.sms_consent ? 'Yes (opted in)' : 'No'),
-    `<i>${esc(time)} ET · ${esc(l.consent.consent_page)}</i>`,
+    ...(c.sms_consent
+      ? [
+          '✅ <b>SMS consent: YES</b>',
+          row('Mobile', c.mobile_number),
+          row('Consented (UTC)', c.consent_timestamp),
+          row('Page', c.consent_page),
+          row('IP', c.ip),
+          row('User agent', c.user_agent),
+          `<b>Text shown:</b> <i>${esc(c.sms_consent_text)}</i>`,
+        ]
+      : ['⛔ <b>SMS consent: NO</b> — never text this number (calls/email only)']),
+    '',
+    `<i>${esc(time)} ET</i>`,
   );
   return lines.filter((x, i, a) => x !== '' || (a[i - 1] !== '' && i > 0)).join('\n').slice(0, 4000);
 }
