@@ -513,15 +513,31 @@ export function createWorld(canvas: HTMLCanvasElement): WorldHandle | null {
   const TRIM = /^(morado_ss|rojo_plats_estriado|7_vor|transmocion|FB\.|Material_28)/i;
   const KEEP = /^(glass|polarsd|spker|naranjita|rojo_ss|vdr_amarisho|REFLETOR|llantas|pantalla|tmn_control|sillw)/i;
 
+  // Dark, matte rubber. The gold rim lights otherwise glance off the sidewalls as tan, which no base
+  // colour can fix — so the specular response is turned down, and a slight cool tint cancels the
+  // tan of the tyre texture. No gloss.
+  const rubber = new Map<THREE.Material, THREE.Material>();
+  function tyreRubber(src: THREE.MeshStandardMaterial) {
+    let m = rubber.get(src);
+    if (!m) {
+      m = new THREE.MeshPhysicalMaterial({
+        map: src.map, normalMap: src.normalMap, color: new THREE.Color(0.055, 0.062, 0.075),
+        metalness: 0, roughness: 0.95, specularIntensity: 0.15, envMapIntensity: 0.08, side: src.side,
+      });
+      m.name = src.name;
+      rubber.set(src, m);
+    }
+    return m;
+  }
+
   function repaint(m: THREE.Material): THREE.Material {
     const name = m.name || '';
     if (BODY.test(name)) return paint;
     if (TRIM.test(name)) return matte;
     if (/^rditore/i.test(name)) return grille;
     if (/^aluminio/i.test(name)) return chrome;
+    if (/^llantas/i.test(name)) return tyreRubber(m as THREE.MeshStandardMaterial);
     const c = (m as THREE.MeshStandardMaterial).color;
-    // dusty tyre texture reads tan under the warm key light
-    if (/^llantas/i.test(name) && c && !m.userData.dimmed) { c.multiplyScalar(0.4); m.userData.dimmed = true; }
     if (!KEEP.test(name) && c) {
       // any other coloured part: drop saturation so no purple/pink survives
       const hsl = { h: 0, s: 0, l: 0 };
@@ -648,7 +664,7 @@ export function createWorld(canvas: HTMLCanvasElement): WorldHandle | null {
   let first = true;
 
   const aspectMul = (shot: Shot) => {
-    const a = innerWidth / innerHeight;
+    const a = innerWidth > 0 && innerHeight > 0 ? innerWidth / innerHeight : 16 / 9; // hidden/minimised windows report 0×0
     if (shot.ox === 0) return 1; // road/scenery shots: keep the camera on the road ahead, never pull back behind the truck
     return shot.map ? Math.max(1, 1.85 / a) : Math.max(1, 1.25 / a);
   };
@@ -704,6 +720,7 @@ export function createWorld(canvas: HTMLCanvasElement): WorldHandle | null {
   let appliedOx = -1;
   function applyOffset() {
     const w = innerWidth, h = innerHeight, a = w / h;
+    if (!w || !h) return;
     appliedOx = cur.ox;
     if (a > 1.15) camera.setViewOffset(w, h, -w * 0.16 * cur.ox, 0, w, h); // truck in the right ~60%
     else if (a < 0.85) camera.setViewOffset(w, h, 0, h * 0.2 * Math.abs(cur.ox), w, h); // truck in the upper 55%
@@ -712,6 +729,7 @@ export function createWorld(canvas: HTMLCanvasElement): WorldHandle | null {
   }
   function resize() {
     const w = innerWidth, h = innerHeight, a = w / h;
+    if (!w || !h) return; // a 0×0 viewport (hidden tab/pane) would poison the camera with NaN
     renderer.setSize(w, h, false);
     camera.aspect = a;
     applyOffset();
@@ -802,6 +820,10 @@ export function createWorld(canvas: HTMLCanvasElement): WorldHandle | null {
     cur.target.lerp(want.target, f);
     cur.dir.lerp(want.dir, f).normalize();
     cur.dist = Math.exp(Math.log(cur.dist) + (Math.log(want.dist) - Math.log(cur.dist)) * f);
+    // self-heal: a single bad frame (e.g. from a 0×0 viewport) must never freeze the camera on NaN
+    if (!Number.isFinite(cur.dist) || cur.dist <= 0) cur.dist = Number.isFinite(want.dist) && want.dist > 0 ? want.dist : 12;
+    if (!Number.isFinite(cur.target.x + cur.target.y + cur.target.z)) cur.target.copy(want.target);
+    if (!Number.isFinite(cur.dir.x + cur.dir.y + cur.dir.z) || cur.dir.lengthSq() < 1e-6) cur.dir.copy(want.dir).normalize();
     cur.drag += (want.drag - cur.drag) * f;
     cur.ox += (want.ox - cur.ox) * f;
     cur.map += (want.map - cur.map) * f;
